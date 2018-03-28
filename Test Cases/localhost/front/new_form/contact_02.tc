@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>戸建・持ち家
+現在のお住まい
+〒1680063
+使用設備:none
+使用量・料金:2
+ガス使用量:5
+2000円
+ガス会社名:MyGas
+お名前:GasMan
+電話番号:08000000000
+メールアドレス:gasman@gmail.com</description>
+   <name>contact_02</name>
+   <tag>手動見積もり</tag>
+   <comment></comment>
+   <testCaseGuid>db325a56-7821-47ab-b3ec-eb8efc26e127</testCaseGuid>
+</TestCaseEntity>

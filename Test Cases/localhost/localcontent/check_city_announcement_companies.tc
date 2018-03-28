@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>周辺のプロパンガス会社の存在をチェックする</description>
+   <name>check_city_announcement_companies</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0782bbca-8863-4865-9e77-384a431774e8</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>戸建・持ち家
+現在のお住まい
+〒1680063
+使用設備:none
+使用量・料金:2
+ガス使用量:5
+12000円
+ガス会社名:GasBombe
+お名前:GasMan
+電話番号:08000000000
+メールアドレス:gasman@gmail.com</description>
+   <name>contact_01</name>
+   <tag>自動見積もり</tag>
+   <comment></comment>
+   <testCaseGuid>079203d8-6ba1-4d1d-9b7f-67d434108211</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>39ae610f-a396-4a08-ba40-d8c50633cd75</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>
