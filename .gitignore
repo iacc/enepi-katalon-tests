@@ -4,3 +4,6 @@
 /.settings/
 /.classpath
 .svn/
+
+# dynamically generated files
+/Reports/
