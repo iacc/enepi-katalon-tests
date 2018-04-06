@@ -15,11 +15,4 @@
    <tag>自動見積もり</tag>
    <comment></comment>
    <testCaseGuid>079203d8-6ba1-4d1d-9b7f-67d434108211</testCaseGuid>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>39ae610f-a396-4a08-ba40-d8c50633cd75</id>
-      <masked>false</masked>
-      <name>variable</name>
-   </variable>
 </TestCaseEntity>

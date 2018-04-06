@@ -18,30 +18,24 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/')
+WebUI.navigateToUrl('http://localhost:8080/lp/004?pr=katalon_03')
+
+WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
 
 WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
 
-uri = new URI(WebUI.getUrl())
+not_run: WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
 
-path = uri.getPath()
+not_run: WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
 
-contact_id = path.substring(path.lastIndexOf('/') + 1)
+WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
 
-KeywordLogger log = new KeywordLogger()
-
-log.logInfo(contact_id)
+WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
 
 WebUI.closeBrowser()
-
-WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.navigateToUrl(('http://localhost:8080/admin/contacts/' + contact_id) + '/edit')
 

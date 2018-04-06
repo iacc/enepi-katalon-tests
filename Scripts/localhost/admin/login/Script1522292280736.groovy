@@ -18,30 +18,19 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
+import com.kms.katalon.core.logging.KeywordLogger
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/')
+WebUI.navigateToUrl('http://localhost:8080/admin/login')
 
-WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('admin/login/email'), GlobalVariable.admin_email)
 
-WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
+WebUI.setText(findTestObject('admin/login/password'), GlobalVariable.admin_password)
 
-uri = new URI(WebUI.getUrl())
+WebUI.click(findTestObject('admin/login/submit'))
 
-path = uri.getPath()
-
-contact_id = path.substring(path.lastIndexOf('/') + 1)
+WebUI.verifyElementPresent(findTestObject('admin/login/success'), 30)
 
 KeywordLogger log = new KeywordLogger()
-
-log.logInfo(contact_id)
-
-WebUI.closeBrowser()
-
-WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.navigateToUrl(('http://localhost:8080/admin/contacts/' + contact_id) + '/edit')
-
+log.logInfo("yourMsg")

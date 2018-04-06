@@ -18,45 +18,28 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://stg.new.enepi.jp/')
+WebUI.navigateToUrl('http://localhost:8080/lp/002?pr=katalon_03')
 
-WebUI.click(findTestObject('front/estimate_form/check_box/house_kind_store_ex'))
+WebUI.waitForPageLoad(5)
 
-WebUI.click(findTestObject('front/estimate_form/button/house_kind'))
+WebUI.click(findTestObject('front/lp/002_btn'))
 
-WebUI.click(findTestObject('front/estimate_form/check_box/estimate_kind_change_contract'))
+WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
 
-WebUI.click(findTestObject('front/estimate_form/button/estimate_kind'))
+WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('front/estimate_form/input/zip_code'), '1680063')
+WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
 
-WebUI.click(findTestObject('front/estimate_form/button/address'))
+not_run: WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
 
-WebUI.selectOptionByValue(findTestObject('front/estimate_form/select/gas_meter_checked_month'), 'february', true)
+not_run: WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
 
-WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '2')
+WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.doubleClick(findTestObject('front/estimate_form/input/gas_used_amount'))
-
-WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
-
-WebUI.setText(findTestObject('front/estimate_form/input/gas_latest_billing_amount'), '8000')
-
-WebUI.setText(findTestObject('front/estimate_form/input/gas_contracted_shop_name'), 'GasssB')
-
-WebUI.click(findTestObject('front/estimate_form/button/gas_usage_btn'))
-
-WebUI.setText(findTestObject('front/estimate_form/input/name'), 'GasMan')
-
-WebUI.setText(findTestObject('front/estimate_form/input/tel'), '08099999999')
-
-WebUI.setText(findTestObject('front/estimate_form/input/email'), 'gasman@gmail.com')
-
-WebUI.click(findTestObject('front/estimate_form/button/contact_btn'))
+WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
 
 WebUI.closeBrowser()
 

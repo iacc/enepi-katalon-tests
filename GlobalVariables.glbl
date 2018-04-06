@@ -2,4 +2,14 @@
 <GlobalVariableEntities>
    <description></description>
    <tag></tag>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'katalon-admin@iacc.co.jp'</initValue>
+      <name>admin_email</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'36158eb3aee01452'</initValue>
+      <name>admin_password</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

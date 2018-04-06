@@ -4,5 +4,5 @@
    <name>enepi_pc</name>
    <tag></tag>
    <UUID>97e6a5ff-96c8-4f8f-9d82-99dd16166474</UUID>
-   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeout>0</pageLoadTimeout>
 </Project>

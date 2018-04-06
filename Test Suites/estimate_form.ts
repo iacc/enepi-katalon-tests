@@ -16,12 +16,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/localhost/front/new_form/contact_01</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>39ae610f-a396-4a08-ba40-d8c50633cd75</variableId>
-      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>3722ce68-cd83-4395-88ce-93ec174579f1</guid>
