@@ -19,17 +19,23 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-uri = new URI(WebUI.getUrl())
+WebUI.openBrowser('')
 
-path = uri.getPath()
+WebUI.navigateToUrl('http://localhost:8080/lp/004?pr=katalon_03')
 
-contact_id = path.substring(path.lastIndexOf('/') + 1)
+WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
+
+WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_manual'), [('gas_used_amount') : '5'], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
+
+WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
+
+WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
+
+not_run: WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
+
+not_run: WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
 
 WebUI.closeBrowser()
-
-WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.navigateToUrl(('http://localhost:8080/admin/contacts/' + contact_id) + '/edit')
-
-not_run: WebUI.getAttribute(findTestObject('front/estimate_form/katalon_03_auto'), 'test')
 

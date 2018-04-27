@@ -25,7 +25,7 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/')
 
-WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_manual'), [('gas_used_amount') : '5'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
 
@@ -38,6 +38,7 @@ contact_id = path.substring(path.lastIndexOf('/') + 1)
 KeywordLogger log = new KeywordLogger()
 
 log.logInfo(contact_id)
+
 
 WebUI.closeBrowser()
 

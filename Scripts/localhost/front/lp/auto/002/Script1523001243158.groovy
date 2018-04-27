@@ -21,21 +21,21 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/s/lp/003?pr=katalon_03')
+WebUI.navigateToUrl('http://localhost:8080/lp/002?pr=katalon_03')
 
-WebUI.waitForPageLoad(30)
+WebUI.waitForPageLoad(5)
 
-WebUI.click(findTestObject('front/lp/003_btn'))
+WebUI.click(findTestObject('front/lp/002_btn'))
 
-WebUI.waitForElementPresent(findTestObject('front/estimate_form/form_old'), 30)
+WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
 
-WebUI.callTestCase(findTestCase('localhost/front/old_form/contact_auto'), [('gas_used_amount') : '5'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
 
-not_run: WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
+WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
 
-not_run: WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
+WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
 
 WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
 

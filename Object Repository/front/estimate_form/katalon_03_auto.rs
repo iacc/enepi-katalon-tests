@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>page_done</name>
+   <name>katalon_03_auto</name>
    <tag></tag>
-   <elementGuidId>b899e8e3-b13e-44f1-932b-daf3a313f066</elementGuidId>
+   <elementGuidId>d1715ca3-2d30-47a2-994a-b80aa9122696</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>section.done-form</value>
+         <value>input[name=conversion_id]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

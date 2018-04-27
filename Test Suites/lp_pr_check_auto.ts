@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>lp_pr_check</name>
+   <name>lp_pr_check_auto</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-04-06T18:16:51</lastRun>
+   <lastRun>2018-04-27T18:41:52</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -15,30 +15,30 @@
       <guid>61ff6ce6-8f40-4a7b-ae8e-6f1a54e5ee91</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/localhost/front/lp/001</testCaseId>
+      <testCaseId>Test Cases/localhost/front/lp/auto/001</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>44fd3bd9-41d9-4e4b-807a-dd3b4e11e02a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/localhost/front/lp/002</testCaseId>
+      <testCaseId>Test Cases/localhost/front/lp/auto/002</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a9f3ba9d-9168-496e-80d2-5d196accea8a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/localhost/front/lp/003</testCaseId>
+      <testCaseId>Test Cases/localhost/front/lp/auto/003</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c29a1d82-0954-4268-a918-87c30ef39139</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/localhost/front/lp/004</testCaseId>
+      <testCaseId>Test Cases/localhost/front/lp/auto/004</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>94193296-5299-41a5-9808-b8f168b7739e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/localhost/front/lp/005</testCaseId>
+      <testCaseId>Test Cases/localhost/front/lp/auto/005</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

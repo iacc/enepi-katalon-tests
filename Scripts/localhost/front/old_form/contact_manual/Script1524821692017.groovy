@@ -19,17 +19,23 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-uri = new URI(WebUI.getUrl())
+WebUI.setText(findTestObject('front/estimate_form/input/zip_code_old'), '1680063')
 
-path = uri.getPath()
+WebUI.delay(3)
 
-contact_id = path.substring(path.lastIndexOf('/') + 1)
+WebUI.setText(findTestObject('front/estimate_form/select/gas_meter_checked_month_old'), '2', FailureHandling.STOP_ON_FAILURE)
 
-WebUI.closeBrowser()
+WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
 
-WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('front/estimate_form/input/gas_latest_billing_amount'), '1200')
 
-WebUI.navigateToUrl(('http://localhost:8080/admin/contacts/' + contact_id) + '/edit')
+WebUI.setText(findTestObject('front/estimate_form/input/gas_contracted_shop_name'), 'GasBombe')
 
-not_run: WebUI.getAttribute(findTestObject('front/estimate_form/katalon_03_auto'), 'test')
+WebUI.setText(findTestObject('front/estimate_form/input/name'), 'GasMan')
+
+WebUI.setText(findTestObject('front/estimate_form/input/tel'), '08000000000')
+
+WebUI.setText(findTestObject('front/estimate_form/input/email'), 'gasman@gmail.com')
+
+WebUI.click(findTestObject('front/estimate_form/button/old_submit'))
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>contact_manual</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a131112d-d8f0-47b4-873d-ae216513cdc9</testCaseGuid>
+   <variable>
+      <defaultValue>'5'</defaultValue>
+      <description></description>
+      <id>3352ebc5-4152-42aa-8680-47e7c16784bd</id>
+      <masked>false</masked>
+      <name>gas_used_amount</name>
+   </variable>
+</TestCaseEntity>
