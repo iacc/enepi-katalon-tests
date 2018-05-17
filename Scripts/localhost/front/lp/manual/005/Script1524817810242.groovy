@@ -33,9 +33,9 @@ WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
 
 WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
 
-not_run: WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact_by_katalon'), [:], FailureHandling.STOP_ON_FAILURE)
 
-not_run: WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
+WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
 
 WebUI.closeBrowser()
 
