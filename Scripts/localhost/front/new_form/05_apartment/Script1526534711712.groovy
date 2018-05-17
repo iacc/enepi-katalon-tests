@@ -18,18 +18,39 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-WebUI.setText(findTestObject('front/estimate_form/input/zip_code_old'), '1680063')
+WebUI.openBrowser('')
 
-WebUI.delay(3)
+WebUI.navigateToUrl(GlobalVariable.domain)
 
-WebUI.setText(findTestObject('front/estimate_form/select/gas_meter_checked_month_old'), '2', FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('front/estimate_form/check_box/house_kind_apartment'))
+
+WebUI.click(findTestObject('front/estimate_form/button/house_kind_btn'))
+
+WebUI.setText(findTestObject('front/estimate_form/input/number_of_rooms'), '45')
+
+WebUI.setText(findTestObject('front/estimate_form/input/number_of_active_rooms'), '32')
+
+WebUI.setText(findTestObject('front/estimate_form/input/estate_management_company_name'), '東京タワー')
+
+WebUI.click(findTestObject('front/estimate_form/button/apartment_btn'))
+
+WebUI.setText(findTestObject('front/estimate_form/input/zip_code'), '1680063')
+
+WebUI.delay(5)
+
+WebUI.click(findTestObject('front/estimate_form/button/address'))
+
+WebUI.selectOptionByValue(findTestObject('front/estimate_form/select/gas_meter_checked_month'), 'february', true)
 
 WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
 
-WebUI.setText(findTestObject('front/estimate_form/input/gas_latest_billing_amount'), '1200')
+WebUI.setText(findTestObject('front/estimate_form/input/gas_latest_billing_amount'), '2000')
 
-WebUI.setText(findTestObject('front/estimate_form/input/gas_contracted_shop_name'), 'GasBombe')
+WebUI.setText(findTestObject('front/estimate_form/input/gas_contracted_shop_name'), 'MyGas')
+
+WebUI.click(findTestObject('front/estimate_form/button/gas_usage_btn'))
 
 WebUI.setText(findTestObject('front/estimate_form/input/name'), GlobalVariable.customer_name)
 
@@ -37,5 +58,13 @@ WebUI.setText(findTestObject('front/estimate_form/input/tel'), GlobalVariable.cu
 
 WebUI.setText(findTestObject('front/estimate_form/input/email'), GlobalVariable.customer_email)
 
-WebUI.click(findTestObject('front/estimate_form/button/old_submit'))
+WebUI.click(findTestObject('front/estimate_form/button/contact_btn'))
+
+WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_done'), 30)
+
+WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact_by_katalon'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyOptionSelectedByValue(findTestObject('admin/contact/house_kind'), 'apartment', false, 1)
+
+WebUI.closeBrowser()
 

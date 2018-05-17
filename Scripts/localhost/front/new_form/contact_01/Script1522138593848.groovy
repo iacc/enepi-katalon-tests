@@ -23,7 +23,7 @@ import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/')
+WebUI.navigateToUrl(GlobalVariable.domain)
 
 WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_manual'), [('gas_used_amount') : '5'], FailureHandling.STOP_ON_FAILURE)
 
@@ -44,5 +44,5 @@ WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(('http://localhost:8080/admin/contacts/' + contact_id) + '/edit')
+WebUI.navigateToUrl((GlobalVariable.domain + '/admin/contacts/' + contact_id) + '/edit')
 

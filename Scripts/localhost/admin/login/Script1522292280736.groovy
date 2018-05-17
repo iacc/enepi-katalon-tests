@@ -18,11 +18,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.logging.KeywordLogger
+import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/admin/login')
+WebUI.navigateToUrl(GlobalVariable.domain + '/admin/login')
 
 WebUI.setText(findTestObject('admin/login/email'), GlobalVariable.admin_email)
 
@@ -33,4 +33,6 @@ WebUI.click(findTestObject('admin/login/submit'))
 WebUI.verifyElementPresent(findTestObject('admin/login/success'), 30)
 
 KeywordLogger log = new KeywordLogger()
-log.logInfo("yourMsg")
+
+log.logInfo('yourMsg')
+

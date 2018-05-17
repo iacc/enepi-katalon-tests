@@ -21,7 +21,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/s/lp/003?pr=katalon_03')
+WebUI.navigateToUrl(GlobalVariable.domain + '/s/lp/003?pr=katalon_03')
 
 WebUI.waitForPageLoad(30)
 

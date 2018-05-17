@@ -9,7 +9,27 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'24673741760e4695'</initValue>
+      <initValue>'b9c5bd100dfbd36d'</initValue>
       <name>admin_password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>development</description>
+      <initValue>'http://stg.new.enepi.jp'</initValue>
+      <name>domain</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'zalexey@iacc.co.jp'</initValue>
+      <name>customer_email</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'08057814850'</initValue>
+      <name>customer_tel</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'GasMan'</initValue>
+      <name>customer_name</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

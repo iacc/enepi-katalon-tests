@@ -21,7 +21,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/lp/005/lite?pr=katalon_03')
+WebUI.navigateToUrl(GlobalVariable.domain + '/lp/005/lite?pr=katalon_03')
 
 WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
 

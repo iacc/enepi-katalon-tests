@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>戸建・持ち家/引越し先</description>
+   <name>01_detached_new</name>
+   <tag>手動見積もり</tag>
+   <comment></comment>
+   <testCaseGuid>4d44c2e0-d37f-4794-a4c8-35d7a734cfa7</testCaseGuid>
+</TestCaseEntity>

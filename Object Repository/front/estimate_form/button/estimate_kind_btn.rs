@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>house_kind</name>
+   <name>estimate_kind_btn</name>
    <tag></tag>
-   <elementGuidId>8bf4d6b9-4b80-48d5-ab4d-35ac6b67c3ff</elementGuidId>
+   <elementGuidId>0feea0f3-813d-469f-815b-41a5aaaf8830</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>#estimate_kind_btn</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>//div[@id = 'house_kind_btn' and (text() = '
+         <value>//div[@id = 'estimate_kind_btn' and (text() = '
                   次へ
                   
                   
@@ -16,10 +20,6 @@
                   
                   
                 ')]</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
-         <value>#house_kind_btn</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>
@@ -43,7 +43,14 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>house_kind_btn</value>
+      <value>estimate_kind_btn</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-next-step</name>
+      <type>Main</type>
+      <value>3</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -61,6 +68,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;house_kind_btn&quot;)</value>
+      <value>id(&quot;estimate_kind_btn&quot;)</value>
    </webElementProperties>
 </WebElementEntity>

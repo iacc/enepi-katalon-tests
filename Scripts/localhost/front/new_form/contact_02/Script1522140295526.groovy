@@ -22,15 +22,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/')
+WebUI.navigateToUrl(GlobalVariable.domain)
 
 WebUI.click(findTestObject('front/estimate_form/check_box/house_kind_detached'))
 
-WebUI.click(findTestObject('front/estimate_form/button/house_kind'))
+WebUI.click(findTestObject('front/estimate_form/button/house_kind_btn'))
 
 WebUI.click(findTestObject('front/estimate_form/check_box/estimate_kind_change_contract'))
 
-WebUI.click(findTestObject('front/estimate_form/button/estimate_kind'))
+WebUI.click(findTestObject('front/estimate_form/button/estimate_kind_btn'))
 
 WebUI.setText(findTestObject('front/estimate_form/input/zip_code'), '1680063')
 
@@ -48,11 +48,11 @@ WebUI.setText(findTestObject('front/estimate_form/input/gas_contracted_shop_name
 
 WebUI.click(findTestObject('front/estimate_form/button/gas_usage_btn'))
 
-WebUI.setText(findTestObject('front/estimate_form/input/name'), 'GasMan')
+WebUI.setText(findTestObject('front/estimate_form/input/name'), GlobalVariable.customer_name)
 
-WebUI.setText(findTestObject('front/estimate_form/input/tel'), '08000000000')
+WebUI.setText(findTestObject('front/estimate_form/input/tel'), GlobalVariable.customer_tel)
 
-WebUI.setText(findTestObject('front/estimate_form/input/email'), 'gasman@gmail.com')
+WebUI.setText(findTestObject('front/estimate_form/input/email'), GlobalVariable.customer_email)
 
 WebUI.click(findTestObject('front/estimate_form/button/contact_btn'))
 

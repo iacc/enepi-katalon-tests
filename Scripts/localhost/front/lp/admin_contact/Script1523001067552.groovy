@@ -29,7 +29,7 @@ WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(('http://localhost:8080/admin/contacts/' + contact_id) + '/edit')
+WebUI.navigateToUrl((GlobalVariable.domain + '/admin/contacts/' + contact_id) + '/edit')
 
 not_run: WebUI.getAttribute(findTestObject('front/estimate_form/katalon_03_auto'), 'test')
 

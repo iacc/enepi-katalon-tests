@@ -31,11 +31,11 @@ WebUI.setText(findTestObject('front/estimate_form/input/gas_latest_billing_amoun
 
 WebUI.setText(findTestObject('front/estimate_form/input/gas_contracted_shop_name'), 'GasBombe')
 
-WebUI.setText(findTestObject('front/estimate_form/input/name'), 'GasMan')
+WebUI.setText(findTestObject('front/estimate_form/input/name'), GlobalVariable.customer_name)
 
-WebUI.setText(findTestObject('front/estimate_form/input/tel'), '08000000000')
+WebUI.setText(findTestObject('front/estimate_form/input/tel'), GlobalVariable.customer_tel)
 
-WebUI.setText(findTestObject('front/estimate_form/input/email'), 'gasman@gmail.com')
+WebUI.setText(findTestObject('front/estimate_form/input/email'), GlobalVariable.customer_email)
 
 WebUI.click(findTestObject('front/estimate_form/button/old_submit'))
 

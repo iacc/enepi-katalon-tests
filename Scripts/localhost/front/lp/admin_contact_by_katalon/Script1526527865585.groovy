@@ -18,24 +18,23 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.logging.KeywordLogger as KeywordLogger
 
-WebUI.setText(findTestObject('front/estimate_form/input/zip_code_old'), '1680063')
+KeywordLogger log = new KeywordLogger()
 
-WebUI.delay(3)
+not_run: uri = new URI(WebUI.getUrl())
 
-WebUI.setText(findTestObject('front/estimate_form/select/gas_meter_checked_month_old'), '2', FailureHandling.STOP_ON_FAILURE)
+not_run: path = uri.getPath()
 
-WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
+not_run: contact_id = path.substring(path.lastIndexOf('/') + 1)
 
-WebUI.setText(findTestObject('front/estimate_form/input/gas_latest_billing_amount'), '1200')
+contact_id = WebUI.getText(findTestObject('front/lp/katalon_01'), FailureHandling.STOP_ON_FAILURE).replace("LPGAS-", "")
 
-WebUI.setText(findTestObject('front/estimate_form/input/gas_contracted_shop_name'), 'GasBombe')
+log.logInfo(contact_id)
 
-WebUI.setText(findTestObject('front/estimate_form/input/name'), GlobalVariable.customer_name)
+WebUI.closeBrowser()
 
-WebUI.setText(findTestObject('front/estimate_form/input/tel'), GlobalVariable.customer_tel)
+WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('front/estimate_form/input/email'), GlobalVariable.customer_email)
-
-WebUI.click(findTestObject('front/estimate_form/button/old_submit'))
+WebUI.navigateToUrl(((GlobalVariable.domain + '/admin/contacts/') + contact_id) + '/edit')
 

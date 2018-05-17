@@ -22,7 +22,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://localhost:8080/admin/tracking')
+WebUI.navigateToUrl(GlobalVariable.domain + '/admin/tracking')
 
 WebUI.setText(findTestObject('prepare/pr_name'), 'katalon_01')
 
