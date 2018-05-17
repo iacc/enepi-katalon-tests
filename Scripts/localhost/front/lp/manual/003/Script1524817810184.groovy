@@ -31,7 +31,7 @@ WebUI.waitForElementPresent(findTestObject('front/estimate_form/form_old'), 30)
 
 WebUI.callTestCase(findTestCase('localhost/front/old_form/contact_manual'), [('gas_used_amount') : '5'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
+WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_done'), 30)
 
 WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
 
