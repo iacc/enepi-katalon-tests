@@ -38,7 +38,7 @@ WebUI.click(findTestObject('front/estimate_form/button/apartment_btn'))
 
 WebUI.setText(findTestObject('front/estimate_form/input/zip_code'), '1680063')
 
-WebUI.delay(5)
+WebUI.delay(GlobalVariable.zip_wait_time)
 
 WebUI.click(findTestObject('front/estimate_form/button/address'))
 

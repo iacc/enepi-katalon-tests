@@ -32,4 +32,9 @@
       <initValue>'GasMan'</initValue>
       <name>customer_name</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1'</initValue>
+      <name>zip_wait_time</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

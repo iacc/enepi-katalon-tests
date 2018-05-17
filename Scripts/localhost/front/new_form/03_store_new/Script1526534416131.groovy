@@ -34,7 +34,7 @@ WebUI.click(findTestObject('front/estimate_form/button/estimate_kind_btn'))
 
 WebUI.setText(findTestObject('front/estimate_form/input/zip_code'), '1680063')
 
-WebUI.delay(5)
+WebUI.delay(GlobalVariable.zip_wait_time)
 
 WebUI.click(findTestObject('front/estimate_form/button/address'))
 
@@ -62,7 +62,7 @@ WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact_by_katalon'), 
 
 WebUI.verifyOptionSelectedByValue(findTestObject('admin/contact/house_kind'), 'store_ex', false, 1)
 
-WebUI.verifyElementText(findTestObject('admin/contact/estimate_kind'), '現在住居')
+WebUI.verifyElementText(findTestObject('admin/contact/estimate_kind'), '新規開設')
 
 WebUI.closeBrowser()
 
