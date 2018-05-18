@@ -4,7 +4,7 @@
    <name>estimate_form</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-05-17T17:59:06</lastRun>
+   <lastRun>2018-05-18T14:49:13</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -40,5 +40,17 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/localhost/front/new_form/05_apartment</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e1340424-3135-4f4a-84d9-1685376b7f84</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/localhost/front/new_form/06_simulation_change_contract</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e4bfbf95-b359-4c20-9a86-4a75c8b7205f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/localhost/front/new_form/07_simulation_new_contract</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
