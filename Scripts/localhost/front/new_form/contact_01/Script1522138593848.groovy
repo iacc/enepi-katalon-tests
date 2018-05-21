@@ -39,10 +39,9 @@ KeywordLogger log = new KeywordLogger()
 
 log.logInfo(contact_id)
 
-
 WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('localhost/admin/login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl((GlobalVariable.domain + '/admin/contacts/' + contact_id) + '/edit')
+WebUI.navigateToUrl(((GlobalVariable.domain + '/admin/contacts/') + contact_id) + '/edit')
 
