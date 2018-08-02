@@ -27,21 +27,23 @@ WebUI.click(findTestObject('front/estimate_form/check_box/estimate_kind_change_c
 
 WebUI.click(findTestObject('front/estimate_form/button/estimate_kind_btn'))
 
-WebUI.setText(findTestObject('front/estimate_form/input/zip_code'), '1680063')
+WebUI.setText(findTestObject('front/estimate_form/input/zip_code'), GlobalVariable.customer_zip)
 
 WebUI.delay(GlobalVariable.zip_wait_time)
 
 WebUI.click(findTestObject('front/estimate_form/button/address'))
 
-if (WebUI.verifyElementVisible(findTestObject('front/estimate_form/check_box/have_bill'), FailureHandling.OPTIONAL)) {
-    WebUI.click(findTestObject('front/estimate_form/check_box/have_bill'))
-
-    WebUI.click(findTestObject('front/estimate_form/button/have_bill'))
+try {
+	if (lp_005) {
+		if (house_hold) {
+			WebUI.selectOptionByValue(findTestObject('front/estimate_form/select/house_hold'), '4', false)
+		}
+	}
+} catch (Exception e) {
+	WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
 }
 
 WebUI.selectOptionByValue(findTestObject('front/estimate_form/select/gas_meter_checked_month'), 'february', true)
-
-WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
 
 WebUI.setText(findTestObject('front/estimate_form/input/gas_latest_billing_amount'), '1200')
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>戸建・持ち家/現在のお住まい</description>
+   <name>02_detached_change</name>
+   <tag>手動見積もり</tag>
+   <comment></comment>
+   <testCaseGuid>cf180dd9-9983-4605-b6d0-9ea93cc741e9</testCaseGuid>
+</TestCaseEntity>

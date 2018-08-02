@@ -4,7 +4,7 @@
    <name>lp_pr_check_manual</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-05-18T14:49:12</lastRun>
+   <lastRun>2018-08-02T16:39:31</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -36,9 +36,15 @@
       <testCaseId>Test Cases/localhost/front/lp/manual/004</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>928e9c05-7489-4816-84e8-4b4808866982</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/localhost/front/lp/manual/005_gas</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>e8118894-bdb2-405f-8598-7a105413fb21</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/localhost/front/lp/manual/005</testCaseId>
+      <testCaseId>Test Cases/localhost/front/lp/manual/005_house_hold</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

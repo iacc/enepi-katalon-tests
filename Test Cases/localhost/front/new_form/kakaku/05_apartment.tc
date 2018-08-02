@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>集合住宅オーナー</description>
+   <name>05_apartment</name>
+   <tag>手動見積もり</tag>
+   <comment></comment>
+   <testCaseGuid>b7e166a6-a8e7-46a3-b04b-5bbb61a2626f</testCaseGuid>
+</TestCaseEntity>

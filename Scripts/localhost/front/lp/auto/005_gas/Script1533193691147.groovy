@@ -25,15 +25,15 @@ WebUI.navigateToUrl(GlobalVariable.domain + '/lp/005/lite?pr=katalon_03')
 
 WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
 
-WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_manual'), [('gas_used_amount') : '5'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [('lp_005') : true], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_done'), 30)
+WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
 
 WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
 
 WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
 
-WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact_by_katalon'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>店舗/現在のお住まい</description>
+   <name>04_store_change</name>
+   <tag>手動見積もり</tag>
+   <comment></comment>
+   <testCaseGuid>3aa7f9cb-8627-4e82-ae0a-d93776b7b30c</testCaseGuid>
+</TestCaseEntity>

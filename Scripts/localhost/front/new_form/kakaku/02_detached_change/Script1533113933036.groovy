@@ -18,24 +18,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl(GlobalVariable.domain + '/lp/005/lite?pr=katalon_03')
+WebUI.navigateToUrl(GlobalVariable.domain + GlobalVariable.kakaku_path)
 
-WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
-
-WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
-
-WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
-
-WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
-
-WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
-
-WebUI.closeBrowser()
+WebUI.callTestCase(findTestCase('localhost/front/new_form/patterns/02_detached_change'), [('kakaku') : true, ('enechange') : false], 
+    FailureHandling.STOP_ON_FAILURE)
 
