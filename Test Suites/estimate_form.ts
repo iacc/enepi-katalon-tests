@@ -53,4 +53,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/localhost/front/new_form/07_simulation_new_contract</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>e1885e6f-a85c-4bf6-be4d-70c7f9614d38</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/localhost/front/old_form/01_apartment</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
