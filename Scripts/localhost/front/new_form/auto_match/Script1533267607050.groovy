@@ -19,29 +19,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl(GlobalVariable.domain + '/lp/002?pr=katalon_03')
-
-WebUI.waitForPageLoad(5)
-
-WebUI.click(findTestObject('front/lp/002_btn'))
-
-WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
-
-WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
-
-WebUI.verifyElementPresent(findTestObject('front/lp/katalon_01'), 3)
-
-WebUI.verifyElementPresent(findTestObject('front/lp/katalon_03'), 3)
-
-WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
-
-WebUI.callTestCase(findTestCase('localhost/front/new_form/auto_match'), [:], FailureHandling.STOP_ON_FAILURE)
+contact_link = WebUI.getAttribute(findTestObject('admin/contact/contact_show_link'), 'href')
 
 WebUI.closeBrowser()
+
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl(contact_link)
+
+WebUI.click(findTestObject('front/matching_screen/estimate_checkbox'))
+
+WebUI.click(findTestObject('front/matching_screen/send_estimates_btn'))
+
+WebUI.verifyElementPresent(findTestObject('front/matching_screen/enquire_suggest'), 10)
 

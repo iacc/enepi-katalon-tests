@@ -4,7 +4,7 @@
    <name>lp_pr_check_auto</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-08-02T16:39:31</lastRun>
+   <lastRun>2018-08-03T14:33:04</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>

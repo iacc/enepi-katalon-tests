@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>development</description>
-      <initValue>'http://stg.new.enepi.jp'</initValue>
+      <initValue>'https://stg.new.enepi.jp'</initValue>
       <name>domain</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

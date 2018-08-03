@@ -41,5 +41,7 @@ WebUI.callTestCase(findTestCase('localhost/front/lp/admin_contact'), [:], Failur
 
 WebUI.verifyElementText(findTestObject('admin/contact/pr_param'), 'katalon_03')
 
+WebUI.callTestCase(findTestCase('localhost/front/new_form/auto_match'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.closeBrowser()
 
