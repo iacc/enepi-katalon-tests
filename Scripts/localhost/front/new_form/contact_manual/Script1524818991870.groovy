@@ -34,11 +34,21 @@ WebUI.delay(GlobalVariable.zip_wait_time)
 WebUI.click(findTestObject('front/estimate_form/button/address'))
 
 try {
-	if (lp_005) {
-		if (house_hold) {
-			WebUI.selectOptionByValue(findTestObject('front/estimate_form/select/house_hold'), '4', false)
-		}
-	}
+    if (lp_005) {
+        if (house_hold) {
+            WebUI.click(findTestObject('front/estimate_form/check_box/have_bill_no'))
+
+            WebUI.click(findTestObject('front/estimate_form/button/have_bill'))
+
+            WebUI.selectOptionByValue(findTestObject('front/estimate_form/select/house_hold'), '4', false)
+        } else {
+			WebUI.click(findTestObject('front/estimate_form/check_box/have_bill_yes'))
+		
+			WebUI.click(findTestObject('front/estimate_form/button/have_bill'))
+			
+			WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
+        }
+    }
 } catch (Exception e) {
 	WebUI.setText(findTestObject('front/estimate_form/input/gas_used_amount'), '5')
 }

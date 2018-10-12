@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>development</description>
-      <initValue>'https://stg.new.enepi.jp'</initValue>
+      <initValue>'http://localhost:8080'</initValue>
       <name>domain</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

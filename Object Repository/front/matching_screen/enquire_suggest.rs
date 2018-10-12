@@ -4,7 +4,21 @@
    <name>enquire_suggest</name>
    <tag></tag>
    <elementGuidId>2330fa9a-a70b-4a3d-9ae8-ceb27eb53464</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = '
+    お困りの方はこちら
+  ' or . = '
+    お困りの方はこちら
+  ')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#match_modal</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

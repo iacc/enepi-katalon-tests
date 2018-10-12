@@ -27,9 +27,7 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(contact_link)
 
-WebUI.click(findTestObject('front/matching_screen/estimate_checkbox'))
-
 WebUI.click(findTestObject('front/matching_screen/send_estimates_btn'))
 
-WebUI.verifyElementPresent(findTestObject('front/matching_screen/enquire_suggest'), 10)
+WebUI.verifyElementVisible(findTestObject('front/matching_screen/enquire_suggest'), FailureHandling.STOP_ON_FAILURE)
 

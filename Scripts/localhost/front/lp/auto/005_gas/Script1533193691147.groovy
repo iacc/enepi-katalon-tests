@@ -25,7 +25,7 @@ WebUI.navigateToUrl(GlobalVariable.domain + '/lp/005/lite?pr=katalon_03')
 
 WebUI.waitForElementPresent(findTestObject('front/estimate_form/form'), 30)
 
-WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [('lp_005') : true], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('localhost/front/new_form/contact_auto'), [('lp_005') : true, ('house_hold') : false], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementPresent(findTestObject('front/estimate_form/page_pin'), 30)
 

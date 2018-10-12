@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>have_bill</name>
+   <name>have_bill_no</name>
    <tag></tag>
-   <elementGuidId>8766ff77-03a3-49f4-b1bb-97412e1145dc</elementGuidId>
+   <elementGuidId>94dc6e98-fa4d-40cb-8d41-f9a7a4898a2b</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>CSS</key>
-         <value>#register_form .slide-content-6 label[for=have_bill_yes]</value>
-      </entry>
       <entry>
          <key>BASIC</key>
          <value>//label[(text() = '
@@ -24,6 +20,10 @@
                     
                     現在のお住まい
                   ')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#register_form .slide-content-6 label[for=have_bill_no]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>
