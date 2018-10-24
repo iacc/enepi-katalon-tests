@@ -54,4 +54,9 @@
       <initValue>'/enechange/lpgas/contacts/new'</initValue>
       <name>enechange_path</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'杉並区和泉'</initValue>
+      <name>customer_address</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

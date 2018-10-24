@@ -4,7 +4,7 @@
    <name>lp_pr_check_manual</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-10-12T18:45:01</lastRun>
+   <lastRun>2018-10-23T17:22:41</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -46,5 +46,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/localhost/front/lp/manual/005_house_hold</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>becb63db-4994-4b74-94cb-14c2d6c21d01</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/localhost/front/lp/manual/005_either</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
